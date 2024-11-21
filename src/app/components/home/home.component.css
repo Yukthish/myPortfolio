@@ -1,0 +1,18 @@
+.home {
+  display: flex;
+  align-items: center;
+}
+
+.content {
+  max-width: 800px;
+}
+
+.greeting {
+  color: #64ffda;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.description {
+  max-width: 540px;
+}

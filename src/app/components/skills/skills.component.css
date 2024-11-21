@@ -1,0 +1,57 @@
+
+.skills {
+  padding-top: 120px;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Auto-fit for responsive grid */
+  gap: 40px;
+  margin-top: 40px;
+}
+
+.skill-category h3 {
+  color: #ccd6f6;
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+.skill-category ul {
+  list-style: none;
+  padding: 0;
+}
+
+.skill-category li {
+  display: flex;
+  align-items: center; /* Align logo and name horizontally */
+  margin-bottom: 20px;
+}
+
+.skill-logo {
+  width: 40px; /* Set fixed size for logos */
+  height: 40px;
+  margin-right: 15px; /* Space between logo and name */
+}
+
+.skill-name {
+  color: #8892b0;
+  font-size: 18px;
+  display: inline-block; /* Ensures the name stays on the same line as the logo */
+  
+}
+
+/* Remove progress bar styles since you're no longer using them */
+.progress-bar {
+  display: none;
+}
+
+.progress {
+  display: none;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .skills-grid {
+      grid-template-columns: 1fr; /* Stack skills in a single column for smaller screens */
+  }
+}

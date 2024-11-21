@@ -1,0 +1,78 @@
+.projects {
+  padding-top: 120px;
+}
+
+.projects-grid {
+  display: grid;
+  gap: 40px; /* Space between the cards */
+  grid-template-columns: repeat(2, 1fr); /* Two columns in the first row */
+  justify-items: center; /* Center items horizontally */
+}
+
+.project-card {
+  display: flex;
+  flex-direction: column; /* Stack content and image vertically */
+  width: 100%; /* Ensure each card takes full width available in grid cell */
+  max-width: 500px; /* Control the width of each card */
+}
+
+.justified-text {
+  text-align:justify;
+  /* text-align-last: left; */
+}
+
+
+.project-content {
+  background-color: #112240;
+  padding: 25px;
+  border-radius: 4px;
+  color: #a8b2d1;
+  margin-bottom: 20px;
+}
+
+.project-title {
+  color: #ccd6f6;
+  font-size: 28px;
+  margin-bottom: 15px;
+}
+
+.project-description {
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+
+.project-tech-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  list-style: none;
+  padding: 0;
+}
+
+.project-tech-list li {
+  color: #8892b0;
+  font-size: 13px;
+}
+
+.project-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .projects-grid {
+    grid-template-columns: 1fr; /* Stack cards in a single column for smaller screens */
+  }
+  
+  .project-card {
+    max-width: 100%; /* Allow the card to take full width */
+  }
+}
+
+/* Ensures that the third card appears below the first two and is centered */
+.projects-grid > .project-card:nth-child(3) {
+  grid-column: span 2; /* Make the third card span across both columns */
+  justify-self: center; /* Center the third card horizontally */
+}
